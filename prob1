@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+    int arr[10], i, snum, lnum;
+    float sum = 0.00, average = 0.0;
+    
+    cout << "Enter 10 numbers: " ;
+    
+    for (i = 0; i < 10; i++)
+        cin >> arr[i];
+    lnum = arr[0];
+    for (i = 0; i < 10; i++)
+    {
+        if (lnum < arr[i])
+        { lnum = arr[i];}
+    }
+    snum = arr[0];
+    for (i = 0; i < 10; i++)
+    {
+        if (snum > arr[i])
+        { snum = arr[i];}
+    }
+    for (i = 0; i < 10; i++)
+    {
+        sum += arr[i];
+    }
+    for (i = 0; i < 10; i++)
+    {
+        average = sum / 10;
+    }
+    
+    cout << "\n\n";
+    cout << "The smallest integer is: " << snum << endl;
+    cout << "The largest integer is: " << lnum << endl;
+    cout << "The total is: " << sum << endl;
+    cout << "The average is: " << average << endl;
+    
+    return 0;
+}
